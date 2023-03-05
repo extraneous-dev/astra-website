@@ -1,0 +1,79 @@
+<p>
+    Enter your details, and I'll give you a call whenever I have time.
+</p>
+<form name="newProject">
+    <input type="text" required name="name" placeholder="Your name" />
+    <input
+        type="email"
+        required
+        name="email"
+        placeholder="Your email"
+    />
+    <input
+        type="tel"
+        required
+        name="phoneNumber"
+        placeholder="Your phone number"
+    />
+    <input
+        type="text"
+        required
+        name="projectTitle"
+        placeholder="Your project title"
+    />
+    <span
+        >We need a description for your project. Make sure to include
+        references (designs, if you have any, or similar websites).</span
+    >
+    <textarea
+        name="projectDescription"
+        placeholder="Please add a description of your project."
+        cols="7"></textarea>
+    <span
+        >What times would you be available to talk about your project?</span
+    >
+    <div>
+        <label for="early">Early</label>
+        <input type="checkbox" name="early" />
+    </div>
+    <div>
+        <label for="noon">Noon</label>
+        <input type="checkbox" name="noon" />
+    </div>
+    <div>
+        <label for="afternoon">Afternoon</label>
+        <input type="checkbox" name="afternoon" />
+    </div>
+    <span>And what days?</span>
+    <div id="days">
+        <div>
+            <input type="checkbox" name="Monday" />
+            <label for="Monday">Monday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Tuesday" />
+            <label for="Tuesday">Tuesday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Wednesday" />
+            <label for="Wednesday">Wednesday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Thursday" />
+            <label for="Thursday">Thursday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Friday" />
+            <label for="Friday">Friday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Saturday" />
+            <label for="Saturday">Saturday</label>
+        </div>
+        <div>
+            <input type="checkbox" name="Sunday" />
+            <label for="Sunday">Sunday</label>
+        </div>
+    </div>
+    <input type="submit" value="Send" />
+</form>
