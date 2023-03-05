@@ -1,0 +1,13 @@
+---
+export interface Props {
+	heading: string;
+	subheading: string | undefined;
+}
+
+const { heading, subheading } = Astro.props;
+---
+<section id="">
+    <h3>{heading}</h3>
+    <h4>{subheading}</h4>
+    <slot />
+</section>

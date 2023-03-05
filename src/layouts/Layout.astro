@@ -14,6 +14,14 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script
+			defer
+			data-domain="astraweb.dev"
+			src="https://plausible.io/js/plausible.js"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
 	</head>
 	<body>
 		<slot />
@@ -21,15 +29,13 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		--primary-color: #000d84;
+		--dark-primary-color: #000638;
+		--secondary-color: #00ffa3;
+		--text-color: #fff;
+		--main-padding: 35px;
+		--base-text-size: 18px;
+		--main-font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+		--heading-font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
 	}
 </style>

@@ -1,81 +1,189 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Section from '../components/Section.astro';
+import Row from '../components/Row.astro';
+import '../styles/main.scss';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+	
+    <nav>
+        <ul>
+            <li>
+                <h1>astraWeb.dev<span class="page-title">elopment</span></h1>
+                <button id="menu-button">☰</button>
+            </li>
+            <li><a href="#examples">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="//blog.astraweb.dev">Blog</a></li>
+            <li><a href="index-es.html">Ver en Español</a></li>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+        </ul>
+    </nav>
+    <header>
+        <h2>web development that's out of this world</h2>
+        <a href="#contact" class="button" role="button">Contact Us</a>
+        <div id="quote">
+            <div class="separator"></div>
+        </div>
+    </header>
+    <section id="smallTagline">
+        <p>Astra is a web development company that designs & builds websites for small businesses - with benefits that
+            you won't
+            find in other webdev businesses.</p>
+    </section>
+    <Section heading="whyUs" subheading="">
+        <div class="rowContainer">
+            <Row heading="WordPress websites are slow. Our websites are blazing-fast">
+                <div class="row-inner">
+                    <p>Many of our competitors use tools like WordPress, which allow them to create a website quickly
+                        and
+                        easily, but end up creating a slower site</p>
+                    <p>WordPress is a dynamic site generator, which means every time someone visits your website, it has
+                        to
+                        do a bunch of processing to serve the name, content, etc. With us, we directly code it into your
+                        website,
+                        so it loads lightning-fast!</p>
+                    <p>In effect, slower sites are heavily penalized, so they appear lower in Google Search and Maps. 3%
+                        of customers
+                        leave a website every second it takes to load.</p>
+                </div>
+            </Row>
+            <Row heading="Our websites don't require any maintenance.">
+                <div class="row-inner">
+                    <p>With other website creators, you have to worry about your WordPress and plugins not getting
+                        hacked.
+                    </p>
+                    <p>With us, you don't need to update plugins or make sure the website
+                        is working.
+                    </p>
+                </div>
+            </Row>
+            <Row heading="Mobile-centered by design.">
+                <div class="row-inner">
+                    <p>Every website nowadays needs to look well on phones, and we focus our development on building
+                        good-looking websites.</p>
+                </div>
+        </Row>
+		</div>
+        <h4 class="tagline">We make custom static websites that perform<em> better </em>than our competitors and can
+            help increase your customers.</h4>
+		</Section>
+    <Section heading="Wanna look at our portfolio?" subheading="">
+        <app-portfolio-container>
+            <app-portfolio-tab name="Webdev">
+                <image-carousel></image-carousel>
+
+            </app-portfolio-tab>
+            <app-portfolio-tab name="UI Design"></app-portfolio-tab>
+        </app-portfolio-container>
+        <ul>
+            <li><a href="demo-websites/product-design-1">IO RetroPlayer PRO (demo)</a></li>
+            <li><a href="demo-websites/farm-1">Farm (demo)</a></li>
+            <li><a href="demo-websites/gaming-1">Gaming (demo)</a></li>
+        </ul>
+        <image-carousel></image-carousel>
+    </Section>
+    <Section heading="All in means all in." subheading="">
+        <span>No additional hosting costs.</span>
+        <span>No buying domains.</span>
+        <span>Just give us a bit of information, and we'll get to work.</span>
+        <span>And in the future, we may be able to handle marketing and other important operations, too!</span>
+
+	</Section>
+    <!-- <section>
+        <h3>Why </h3>
+    </section> -->
+    <Section heading="Pricing" subheading="Simple Pricing">
+        <div class="card">
+            <h5>Monthly</h5>
+            <span>All-in. Everything you need for your business's online presence.</span>
+            <span class="priceOuter"><span class="priceInner">$80</span>/month</span>
+            <ul>
+                <li>Basic Google Business Profile setup</li>
+                <li>Included hosting & domain</li>
+                <li>Unlimited Updates</li>
+                <li>Analytics setup via Google or Plausible</li>
+            </ul>
+            <span class="bold">Note: You must pay for at least 9 months.</span>
+        </div>
+    </Section>
+    <section id="about">
+        <h3>about</h3>
+        <Row heading="">
+            <div>
+                <h4>hi. i'm jose sanchez.</h4>
+                <p>I'm a designer and developer of websites and software products. I've had a significant amount of
+                    experience in webdev, having an internship making webapps since my senior year of high school, and
+                    participating in other internships and computer science-related programs since. I'm
+                    currently studying CS in college, so know that your business will help a student out!
+                    :)</p>
+                <a class="button" role="button" href="https://josesanchez.dev">View Personal Portfolio/website</a>
+                <!-- UPDATE WHEN PORTFOLIO WEBSITE GOES LIVE -->
+            </div>
+            <img src="#" />
+        </Row>
+    </section>
+    <section id="contact">
+        <h3>ready for web development that's awesome?</h3>
+        <p>Enter your details, and I'll give you a call whenever I have time.</p>
+        <form name="newProject">
+            <input type="text" required name="name" placeholder="Your name" />
+            <input type="email" required name="email" placeholder="Your email" />
+            <input type="tel" required name="phoneNumber" placeholder="Your phone number" />
+            <input type="text" required name="projectTitle" placeholder="Your project title" />
+            <span>We need a description for your project. Make sure to include references (designs, if you have any, or
+                similar websites).</span>
+            <textarea name="projectDescription" placeholder="Please add a description of your project." cols="7"></textarea>
+            <span>What times would you be available to talk about your project?</span>
+            <div><label for="early">Early</label>
+                <input type="checkbox" name="early" />
+            </div>
+            <div><label for="noon">Noon</label>
+                <input type="checkbox" name="noon" />
+            </div>
+            <div><label for="afternoon">Afternoon</label>
+                <input type="checkbox" name="afternoon" />
+            </div>
+            <span>And what days?</span>
+            <div id="days">
+                <div>
+                    <input type="checkbox" name="Monday" />
+                    <label for="Monday">Monday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Tuesday" />
+                    <label for="Tuesday">Tuesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Wednesday" />
+                    <label for="Wednesday">Wednesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Thursday" />
+                    <label for="Thursday">Thursday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Friday" />
+                    <label for="Friday">Friday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Saturday" />
+                    <label for="Saturday">Saturday</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="Sunday" />
+                    <label for="Sunday">Sunday</label>
+                </div>
+            </div>
+            <input type="submit" value="Send" />
+
+        </form>
+        <div id="sphere">
+        </div>
+    </section>
+    <footer>
+        Copyright &copy; Extraneous Dev. <a href="existing_customers.html">Existing Customer?</a> | Contact at "email"
+    </footer>
+
+</Layout>
