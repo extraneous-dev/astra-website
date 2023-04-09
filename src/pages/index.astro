@@ -5,13 +5,11 @@ import Section from "../components/Section.astro";
 import Row from "../components/Row.astro";
 import PortfolioContainer from "../components/PortfolioContainer.astro";
 import ContactForm from "../components/ContactForm.astro";
+import PageHeader from "../components/PageHeader.astro";
 ---
 
 <Layout title="Astra Web Development">
-	<header>
-		<h2>web development that's out of this world</h2>
-		<a href="#contact" class="button" role="button">Contact Us</a>
-	</header>
+	<PageHeader />
 	<section id="smallTagline">
 		<p>
 			Astra is a web development company that designs & builds websites
@@ -19,7 +17,7 @@ import ContactForm from "../components/ContactForm.astro";
 			webdev businesses.
 		</p>
 	</section>
-	<Section heading="whyUs" subheading="">
+	<Section heading="Why Us?" subheading="" id="whyUs">
 		<div class="rowContainer">
 			<Row
 				heading="WordPress websites are slow. Our websites are blazing-fast"
@@ -67,25 +65,15 @@ import ContactForm from "../components/ContactForm.astro";
 	</Section>
 	<Section heading="Wanna look at our portfolio?" subheading="">
 		<PortfolioContainer />
-		<ul>
-			<li>
-				<a href="demo-websites/product-design-1"
-					>IO RetroPlayer PRO (demo)</a
-				>
-			</li>
-			<li><a href="demo-websites/farm-1">Farm (demo)</a></li>
-			<li><a href="demo-websites/gaming-1">Gaming (demo)</a></li>
-		</ul>
-		<image-carousel></image-carousel>
 	</Section>
 	<Section heading="All in means all in." subheading="">
-		<span>No additional hosting costs.</span>
-		<span>No buying domains.</span>
-		<span>Just give us a bit of information, and we'll get to work.</span>
-		<span
+		<h1>No additional hosting costs.</h1>
+		<h1>No buying domains.</h1>
+		<h1>Just a bit of information, and we'll get to work.</h1>
+		<!-- <span
 			>And in the future, we may be able to handle marketing and other
 			important operations, too!</span
-		>
+		> -->
 	</Section>
 	<Section heading="Pricing" subheading="Simple Pricing">
 		<div class="card">
@@ -106,7 +94,7 @@ import ContactForm from "../components/ContactForm.astro";
 			<span class="bold">Note: You must pay for at least 9 months.</span>
 		</div>
 	</Section>
-	<Section heading="about" subheading="">
+	<Section heading="about" subheading="" id="about">
 		<Row heading="">
 			<div>
 				<h4>hi. i'm jose sanchez.</h4>
@@ -123,10 +111,9 @@ import ContactForm from "../components/ContactForm.astro";
 					>View Personal Portfolio/website</a
 				>
 			</div>
-			<img src="#" />
 		</Row>
 	</Section>
-	<Section heading="ready for web development that's awesome?" subheading="">
+	<Section heading="ready for web development that's awesome?" subheading="" id="contact">
 		<ContactForm />
 		<!-- <div id="sphere"></div> -->
 	</Section>

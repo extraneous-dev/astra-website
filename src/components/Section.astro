@@ -2,11 +2,12 @@
 export interface Props {
 	heading: string;
 	subheading: string | undefined;
+    id: string | undefined | null;
 }
 
-const { heading, subheading } = Astro.props;
+const { heading, subheading, id } = Astro.props;
 ---
-<section id="">
+<section id={id}>
     <h3>{heading}</h3>
     <h4>{subheading}</h4>
     <slot />

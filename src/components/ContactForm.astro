@@ -1,14 +1,7 @@
-<p>
-    Enter your details, and I'll give you a call whenever I have time.
-</p>
+<p>Enter your details, and I'll give you a call whenever I have time.</p>
 <form name="newProject">
     <input type="text" required name="name" placeholder="Your name" />
-    <input
-        type="email"
-        required
-        name="email"
-        placeholder="Your email"
-    />
+    <input type="email" required name="email" placeholder="Your email" />
     <input
         type="tel"
         required
@@ -22,27 +15,27 @@
         placeholder="Your project title"
     />
     <span
-        >We need a description for your project. Make sure to include
-        references (designs, if you have any, or similar websites).</span
+        >We need a description for your project. Make sure to include references
+        (designs, if you have any, or similar websites).</span
     >
     <textarea
         name="projectDescription"
         placeholder="Please add a description of your project."
         cols="7"></textarea>
-    <span
-        >What times would you be available to talk about your project?</span
-    >
-    <div>
-        <label for="early">Early</label>
-        <input type="checkbox" name="early" />
-    </div>
-    <div>
-        <label for="noon">Noon</label>
-        <input type="checkbox" name="noon" />
-    </div>
-    <div>
-        <label for="afternoon">Afternoon</label>
-        <input type="checkbox" name="afternoon" />
+    <span>What times would you be available to talk about your project?</span>
+    <div class="contactFormTimes">
+        <div>
+            <input type="checkbox" name="early" />
+            <label for="early">Early</label>
+        </div>
+        <div>
+            <input type="checkbox" name="noon" />
+            <label for="noon">Noon</label>
+        </div>
+        <div>
+            <input type="checkbox" name="afternoon" />
+            <label for="afternoon">Afternoon</label>
+        </div>
     </div>
     <span>And what days?</span>
     <div id="days">
