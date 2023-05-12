@@ -7,6 +7,8 @@ import PortfolioContainer from "../components/PortfolioContainer.astro";
 import ContactForm from "../components/ContactForm.astro";
 import PageHeader from "../components/PageHeader.astro";
 import { Image } from '@astrojs/image/components';
+import TabGroup from "../components/tabs/TabGroup.astro";
+import Tab from "../components/tabs/Tab.astro";
 ---
 
 <Layout title="Astra Web Development">
@@ -19,12 +21,16 @@ import { Image } from '@astrojs/image/components';
 		</p>
 	</section>
 	<Section heading="You might be wondering... why a website?" subheading="">
-		<div class="caseSlider">Restaurant Store?</div>
+		<TabGroup>
+			<Tab heading="Restaurant">Hello World!</Tab>
+			<Tab heading="Store">Hello 2!</Tab>
+		</TabGroup>
 		<p>Because people need to know your hours, menu, and location!</p>
-		<Image src="restaurant_screenshot.png" width={400} height={400} />
-		<h2>People <em>hate</em> restuarant websites...</h2>
+		<Image src="restaurant_screenshot.png" width={300} height={300} />
+		<h2>People <em>hate</em> awful restuarant websites...</h2>
 		<h2>They <em>hate</em> GrubHubs, Facebook Pages, and menus that don't make sense...</h2>
-		<h1>So why not make a good website?</h1>
+		<h2>They <em>hate</em> needlessly complicated and bloated websites...</h2>
+		<h1>So why not get a good website that loads fast, from us?</h1>
 
 	</Section>
 	<Section heading="Why Us?" subheading="" id="whyUs">
@@ -69,7 +75,7 @@ import { Image } from '@astrojs/image/components';
 			</Row>
 		</div>
 		<h4 class="tagline">
-			We make custom static websites that perform<em> better</em>than our
+			We make custom static websites that perform<em> better </em>than our
 			competitors and can help increase your customers.
 		</h4>
 	</Section>
