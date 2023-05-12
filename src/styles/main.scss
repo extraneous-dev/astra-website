@@ -202,10 +202,6 @@ form {
     display: flex;
     flex-direction: column;
 
-    input {
-        // z-index: 1;
-    }
-
     #days, .contactFormTimes {
         flex-direction: row;
         flex-wrap: wrap;
@@ -231,13 +227,6 @@ form {
 
     .row {
         flex-direction: row;
-
-    }
-
-    form {
-        #days {
-            // flex-direction: row;
-        }
     }
 
     .rowContainer {

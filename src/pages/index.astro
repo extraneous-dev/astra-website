@@ -6,6 +6,7 @@ import Row from "../components/Row.astro";
 import PortfolioContainer from "../components/PortfolioContainer.astro";
 import ContactForm from "../components/ContactForm.astro";
 import PageHeader from "../components/PageHeader.astro";
+import { Image } from '@astrojs/image/components';
 ---
 
 <Layout title="Astra Web Development">
@@ -17,10 +18,19 @@ import PageHeader from "../components/PageHeader.astro";
 			webdev businesses.
 		</p>
 	</section>
+	<Section heading="You might be wondering... why a website?" subheading="">
+		<div class="caseSlider">Restaurant Store?</div>
+		<p>Because people need to know your hours, menu, and location!</p>
+		<Image src="restaurant_screenshot.png" width={400} height={400} />
+		<h2>People <em>hate</em> restuarant websites...</h2>
+		<h2>They <em>hate</em> GrubHubs, Facebook Pages, and menus that don't make sense...</h2>
+		<h1>So why not make a good website?</h1>
+
+	</Section>
 	<Section heading="Why Us?" subheading="" id="whyUs">
 		<div class="rowContainer">
 			<Row
-				heading="WordPress websites are slow. Our websites are blazing-fast"
+				heading="Others' websites are slow. Our websites are blazing-fast."
 			>
 					<p>
 						Many of our competitors use tools like WordPress, which
@@ -50,7 +60,7 @@ import PageHeader from "../components/PageHeader.astro";
 						the website is working.
 					</p>
 			</Row>
-			<Row heading="Mobile-centered by design.">
+			<Row heading="We're mobile-centered by design.">
 					<p>
 						Every website nowadays needs to look well on phones, and
 						we focus our development on building good-looking

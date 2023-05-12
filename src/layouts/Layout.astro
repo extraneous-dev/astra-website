@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -9,48 +9,98 @@ import i18next, { t } from "i18next";
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={t("site.description")} />
-		<title>{title}</title>
-		<script
-			defer
-			data-domain="astraweb.dev"
-			src="https://plausible.io/js/plausible.js"
-		></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Red+Hat+Text&display=swap" rel="stylesheet"> 	
-	</head>
-	<body>
-		<nav>
-			<ul>
-				<li>
-					<h1>astraWeb.dev<span class="page-title">elopment</span></h1>
-					<button id="menu-button">☰</button>
-				</li>
-				<li><a href="#examples">Portfolio</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="//blog.astraweb.dev">Blog</a></li>
-				<li><a href="index-es.html">Ver en Español</a></li>
-	
-			</ul>
-		</nav>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={t("site.description")} />
+    <title>{title}</title>
+    <script
+      defer
+      data-domain="astraweb.dev"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Red+Hat+Text&display=swap" rel="stylesheet"> -->
+    <!-- Google Fonts content -->
+    <style is:global>
+      /* latin-ext */
+      @font-face {
+        font-family: "Red Hat Display";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/redhatdisplay/v14/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbmyWQkEz_lWZk33BGmGH.woff)
+          format("woff");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: "Red Hat Display";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/redhatdisplay/v14/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbmyWQk8z_lWZk33BGg.woff)
+          format("woff");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: "Red Hat Text";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/redhattext/v13/RrQCbohi_ic6B3yVSzGBrMx6ZI_cy1A6Ok2ML7hwZr_QdqdApIcn_so-.woff)
+          format("woff");
+        unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F,
+          U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F,
+          U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: "Red Hat Text";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/redhattext/v13/RrQCbohi_ic6B3yVSzGBrMx6ZI_cy1A6Ok2ML7hwZrHQdqdApIcn_g.woff)
+          format("woff");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <h1>astraWeb.dev<span class="page-title">elopment</span></h1>
+          <button id="menu-button">☰</button>
+        </li>
+        <li><a href="#examples">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="//blog.astraweb.dev">Blog</a></li>
+        <li><a href="index-es.html">Ver en Español</a></li>
+      </ul>
+    </nav>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--primary-color: #000d84;
-		--dark-primary-color: #000638;
-		--secondary-color: #00ffa3;
-		--text-color: #fff;
-		--main-padding: 35px;
-		--base-text-size: 18px;
-		--main-font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
-		--heading-font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
-	}
+  :root {
+    --primary-color: #000d84;
+    --dark-primary-color: #000638;
+    --secondary-color: #00ffa3;
+    --text-color: #fff;
+    --main-padding: 35px;
+    --base-text-size: 18px;
+    --main-font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+    --heading-font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+  }
 </style>
