@@ -18,7 +18,7 @@ h2,
 h3,
 h4,
 h5 {
-    margin-block: 1rem;
+    margin-block: .25rem;
     font-family: var(--heading-font-family);
 }
 
@@ -52,10 +52,24 @@ header {
     background-color: var(--dark-primary-color);
     color: var(--text-color);
     display: flex;
+    background: url('spaceship.webp');
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 700px;
+    background-position: 65% top;
+    min-height: 650px;
+    background-size: cover;
+    * {
+        z-index: 1;
+    }
+    &::after {
+        z-index: 0;
+        content: '';
+        position: absolute;
+        width: 100vw;
+        min-height: 700px;
+        background-color: rgba(0, 0, 180, .5);
+    }
 
     h2 {
         font-size: 3em;
@@ -78,6 +92,7 @@ nav {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 2;
     padding: .5rem;
 
     .menu-button {
@@ -231,7 +246,7 @@ form {
     }
 
     .rowContainer {
-        max-width: 1400px;
+        max-width: 1150px;
         margin: 0 auto;
     }
 }
@@ -293,4 +308,8 @@ textarea {
     border-radius: 30vw;
     background: linear-gradient(to bottom right, var(--dark-primary-color), var(--secondary-color));
     // background: conic-gradient(from 90deg at 50% 50%, #000638, #002a62, #004b89, #006fa7, #0093b9, #00b8bd, #00dcb4, #00ffa3);
+}
+
+textarea {
+    resize: vertical;
 }
